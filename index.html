@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tranzzo-test</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+<div class="main-container">
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="/">
+          <img src="img/cryptoexch/cryptoexch.png" alt="">
+        </a>
+      </div>
+      <nav class="menu">
+        <a href="#">Обменять</a>
+        <a href="#">Резервы</a>
+        <a href="#">Как мы работаем</a>
+        <a href="#">FAQ</a>
+        <a href="#">Документы</a>
+        <a href="#">Личный кабинет</a>
+      </nav>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#">Обменять</a></li>
+          <li><a class="menu__item" href="#">Резервы</a></li>
+          <li><a class="menu__item" href="#">Как мы работаем</a></li>
+          <li><a class="menu__item" href="#">FAQ</a></li>
+          <li><a class="menu__item" href="#">Документы</a></li>
+          <li><a class="menu__item" href="#">Личный кабинет</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="left">
+      <div class="title">
+        Меняйте валюты как вам удобно!
+      </div>
+      <div class="main-text">
+        Просто выберите интересующую вас валюту и мы обменяем её по самому выгодному курсу.
+      </div>
+      <div class="mark">
+        <img src="img/trustpilot/trustpilot.png" alt="">
+      </div>
+    </div>
+    <div class="right">
+      <form action="" class="form">
+        <h2>Выберите одно из направлений обмена</h2>
+        <div class="pattern-exch">
+          <div class="rectangle" id="first-pattern" onclick="ChangeSelectBtn(1)">
+            <img src="img/bitcoin/bitcoin.png" alt="">
+            <img src="img/arrow-right/arrow-right.png" alt="">
+            <img src="img/card/card.png" alt="">
+          </div>
+          <div class="rectangle" id="second-pattern" onclick="ChangeSelectBtn(2)">
+            <img src="img/bitcoin/bitcoin.png" alt="">
+            <img src="img/arrow-right/arrow-right.png" alt="">
+            <img src="img/etherium/etherium.png" alt="">
+          </div>
+          <div class="rectangle" id="third-pattern" onclick="ChangeSelectBtn(3)">
+            <img src="img/bitcoin/bitcoin.png" alt="">
+            <img src="img/arrow-right/arrow-right.png" alt="">
+            <img src="img/advcash/advcash.png" alt="">
+          </div>
+        </div>
+        <div class="input_box">
+          <p class="input_title">Вы отправляете</p>
+          <div class="input_box_bottom">
+            <input type="text" class="send" name="firstname" value="1000">
+            <div class="custom-select" id="sel_1">
+              <select id="send_select" onchange="sendSelectChange()" class="select">
+                <option value="0" selected>Select Option:</option>
+                <option value="Bitcoin" selected>Bitcoin</option>
+                <option value="Card" disabled>Card</option>
+                <option value="Etherium" >Etherium</option>
+                <option value="Advcash" >Advcash</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <p class="comission">Комиссия за обмен <span>23 UAH</span></p>
+        <div class="input_box">
+          <p class="input_title">Вы получите</p>
+          <div class="input_box_bottom">
+            <input type="text" class="get" name="lastname" value="1000">
+            <div class="custom-select" id="sel_2">
+              <select id="get_select" onchange="getSelectChange()" class="select">
+                <option value="0" selected>Select Option:</option>
+                <option value="Bitcoin" disabled>Bitcoin</option>
+                <option value="Card" selected>Card</option>
+                <option value="Etherium">Etherium</option>
+                <option value="Advcash">Advcash</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <label class="checkbox">
+          <input type="checkbox" class="checkbox-input"/>
+          <div class="checkbox__text">Я согласен с правилами сервиса</div>
+        </label>
+        <input class="submit-btn" type="submit" value="Обменять">
+      </form>
+    </div>
+  </div>
+</div>
+  <script src="./js/select.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
